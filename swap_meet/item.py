@@ -1,14 +1,14 @@
 import uuid
-################## Wave 2 - 1
+################## Wave 2
 class Item:
     def __init__(self, id=None, condition=None):
-        self.id = id if id is not None else uuid.uuid4().int 
-        # Wave 5
-        self.condition = condition if condition is not None else 0
+        self.id = uuid.uuid4().int if id is None else id
+        ############### Wave 5
+        self.condition = 0 if condition is None else condition
     def get_category(self):
         return self.__class__.__name__
     
-    ################## Wave 3 - 1
+    ################## Wave 3
     def __str__(self):
         return f"An object of type Item with id {self.id}."
     
