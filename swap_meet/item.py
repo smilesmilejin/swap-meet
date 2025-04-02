@@ -2,9 +2,9 @@ import uuid
 ################## Wave 2 - 1
 class Item:
     def __init__(self, id=None, condition=None):
-        self.id = uuid.uuid4().int if id is None else id
+        self.id = id if id is not None else uuid.uuid4().int 
         # Wave 5
-        self.condition = 0 if condition is None else condition
+        self.condition = condition if condition is not None else 0
     def get_category(self):
         return self.__class__.__name__
     
