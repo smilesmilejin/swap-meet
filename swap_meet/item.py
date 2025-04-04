@@ -11,16 +11,14 @@ class Item:
     def __str__(self):
         return f"An object of type {self.get_category()} with id {self.id}."
     
-    def condition_description(self):
-        if self.condition == 0:
-            return 'Poor Condition'
-        elif self.condition == 1:
-            return 'Fair Condition'
-        elif self.condition == 2:
-            return 'Good Condition'
-        elif self.condition == 3:
-            return 'Very Good Condition'
-        elif self.condition == 4:
-            return 'Excellent Condition'
-        elif self.condition == 5:
-            return 'New Condition'
+    def condition_description(self):    
+        conditions = {
+            0: 'Poor Condition',
+            1: 'Fair Condition',
+            2: 'Good Condition',
+            3: 'Very Good Condition',
+            4: 'Excellent Condition',
+            5: 'New Condition'
+        }
+        
+        return conditions[self.condition]
