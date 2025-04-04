@@ -6,4 +6,4 @@ class Electronics(Item):
         self.type = "Unknown" if type is None else type
     
     def __str__(self):
-        return f"An object of type Electronics with id {self.id}. This is a {self.type} device."
+        return f"{super().__str__()} This is a {self.type} device."
