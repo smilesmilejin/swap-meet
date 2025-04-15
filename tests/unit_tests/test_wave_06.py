@@ -33,12 +33,7 @@ def test_get_no_matching_items_by_category():
 
     items = vendor.get_by_category("Electronics")
 
-    assert not items
-    # assert items == []
-    # raise Exception("Complete this test according to comments below.")
-    # *********************************************************************
-    # ****** Complete Assert Portion of this test **********
-    # *********************************************************************
+    assert len(items) == 0
 
 # @pytest.mark.skip
 def test_best_by_category():
@@ -116,13 +111,11 @@ def test_swap_best_by_category():
     assert len(tai.inventory) == 3
     assert item_a in tai.inventory
     assert item_b in tai.inventory
-    assert item_c not in tai.inventory
     assert item_f in tai.inventory
 
     assert len(jesse.inventory) == 3
     assert item_d in jesse.inventory
     assert item_e in jesse.inventory
-    assert item_f not in jesse.inventory
     assert item_c in jesse.inventory
     assert result
 
